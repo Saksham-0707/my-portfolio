@@ -49,5 +49,21 @@
         "githubUrl": "https://github.com/Saksham-0707/job-board",
         "demoUrl": "https://job-board-iota-seven.vercel.app/",
         "skills": ["Next.js", "Tailwind CSS", "ShadCN", "PostgreSQL", "Prisma"]
-    }
+    },
+  {
+  "title": "Bottle Price Comparator Extension",
+  "description": "Enhance your shopping experience with our browser extension that scans product pages for bottle details and compares real-time prices with the Baxus marketplace. Instantly access better deals and recommendations.",
+  "type": "Personal Projects",
+  "imageUrl": "/assets/img/bottle-extension.png",
+   "githubUrl": "https://github.com/Saksham-0707/baxus-comp",
+  "skills": ["JavaScript", "Chrome Extension", "Web Scraping", "REST APIs", "HTML", "CSS"]
+},
+{
+  "title": "AI Travel Planner",
+  "description": "Plan smarter and travel better with AI Travel Planner — a responsive web app that leverages AI and public APIs to generate customized itineraries, fetch live flight schedules, hotels, and tourist attractions for your destinations.",
+  "type": "Personal Projects",
+  "imageUrl": "/assets/img/travel-planner.png",
+  "githubUrl": "https://github.com/Saksham-0707/AITravelPlanner",
+  "skills": ["React", "Node.js", "TypeScript", "Tailwind CSS", "ShadCN", "REST APIs"]
+}
 ]
