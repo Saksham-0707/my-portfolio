@@ -33,24 +33,6 @@
         ]
       },
     {
-        "title": "VIVID BLOGS",
-        "description": "Vivid Blogs is an Blog Application, were users can compose share their thoughts",
-        "type": "Personal Projects",
-        "imageUrl": "/assets/img/blog.png",
-        "githubUrl": "https://github.com/vineet-op/Vivid-Blogs",
-        "demoUrl": "https://vividblogs.vercel.app/",
-        "skills": [
-            "TAILWIND",
-            "REACT.JS",
-            "TYPESCRIPT",
-            "JWT AUTH",
-            "FRAMER-MOTION",
-            "HONO",
-            "POSTGRES",
-            "PRISMA"
-        ]
-    },
-    {
         "title": "ZENTRY",
         "description": "Recreated the award-winning Zentry Gaming Website with responsive design and smooth GSAP animations using React and Tailwind CSS.",
         "type": "Personal Projects",
@@ -58,37 +40,6 @@
         "githubUrl": "https://github.com/Saksham-0707/zentry",
         "demoUrl": "https://zentry-alpha-one.vercel.app/",
         "skills": ["JAVASCRIPT", "REACT.JS", "TAILWIND", "GSAP"]
-    },
-
-    {
-        "title": "LogoSmith AI",
-        "description": "An AI-powered logo generator that creates professional logos for your business",
-        "type": "Personal Projects",
-        "imageUrl": "/assets/img/logo.png",
-        "githubUrl": "https://github.com/vineet-op/LogoSmith",
-        "demoUrl": "https://logosmith.vercel.app",
-        "skills": [
-            "Next.js",
-            "Gemini",
-            "Hugging Face",
-            "Tailwind CSS",
-            "ShadCN"
-        ]
-    },
-    {
-        "title": "Podio",
-        "description": "Transform your boring text documents into captivating audio files",
-        "type": "Personal Projects",
-        "imageUrl": "/assets/img/podio.png",
-        "githubUrl": "https://github.com/vineet-op/Podio",
-        "demoUrl": "",
-        "skills": [
-            "Next.js",
-            "Tailwind CSS",
-            "Node.js",
-            "Express.js",
-            "Google Text-to-Speech API"
-        ]
     },
     {
         "title": "Job-Board",
@@ -98,21 +49,5 @@
         "githubUrl": "https://github.com/Saksham-0707/job-board",
         "demoUrl": "https://job-board-iota-seven.vercel.app/",
         "skills": ["Next.js", "Tailwind CSS", "ShadCN", "PostgreSQL", "Prisma"]
-    },
-    {
-        "title": "TaskBuddy",
-        "description": "A task management app that helps you organize your daily tasks and stay productive.",
-        "type": "Personal Projects",
-        "imageUrl": "/assets/img/task.png",
-        "githubUrl": "https://github.com/vineet-op/TaskBuddy01",
-        "demoUrl": "https://task-buddy-beta.vercel.app/",
-        "skills": [
-            "REACT.JS",
-            "Tailwind CSS",
-            "TYPESCRIPT",
-            "FIREBASE",
-            "ZUSTAND",
-            "ShadCN"
-        ]
     }
 ]
