@@ -96,7 +96,7 @@
         "type": "Personal Projects",
         "imageUrl": "/assets/img/jb.png",
         "githubUrl": "https://github.com/Saksham-0707/job-board",
-        "demoUrl": "https://job-board-umber-five.vercel.app/",
+        "demoUrl": "https://job-board-iota-seven.vercel.app/",
         "skills": ["Next.js", "Tailwind CSS", "ShadCN", "PostgreSQL", "Prisma"]
     },
     {
