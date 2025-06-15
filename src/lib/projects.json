@@ -64,6 +64,7 @@
   "type": "Personal Projects",
   "imageUrl": "/assets/img/travel-planner.png",
   "githubUrl": "https://github.com/Saksham-0707/AITravelPlanner",
+  "demoUrl":"https://ai-travel-planner-i2p4.vercel.app/",
   "skills": ["React", "Node.js", "TypeScript", "Tailwind CSS", "ShadCN", "REST APIs"]
 }
 ]
