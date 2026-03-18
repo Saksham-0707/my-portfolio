@@ -4,10 +4,10 @@
  * Mobile navbar is better positioned at bottom right.
  **/
 
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import { cn } from '@/lib/utils';
+import { IconLayoutNavbarCollapse } from '@tabler/icons-react';
 import {
     AnimatePresence,
     MotionValue,
@@ -15,14 +15,9 @@ import {
     useMotionValue,
     useSpring,
     useTransform,
-} from "framer-motion";
-import Link from "next/link";
-import { useRef, useState } from "react";
-
-
-
-
-
+} from 'framer-motion';
+import Link from 'next/link';
+import { useRef, useState } from 'react';
 
 export const FloatingDock = ({
     items,
@@ -33,8 +28,6 @@ export const FloatingDock = ({
     desktopClassName?: string;
     mobileClassName?: string;
 }) => {
-
-
     return (
         <>
             <FloatingDockDesktop items={items} className={desktopClassName} />
@@ -52,7 +45,7 @@ const FloatingDockMobile = ({
 }) => {
     const [open, setOpen] = useState(false);
     return (
-        <div className={cn("relative block md:hidden", className)}>
+        <div className={cn('relative block md:hidden', className)}>
             <AnimatePresence>
                 {open && (
                     <motion.div
@@ -74,14 +67,18 @@ const FloatingDockMobile = ({
                                         delay: idx * 0.05,
                                     },
                                 }}
-                                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+                                transition={{
+                                    delay: (items.length - 1 - idx) * 0.05,
+                                }}
                             >
                                 <Link
                                     href={item.href}
                                     key={item.title}
-                                    className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
+                                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 bg-card/90 text-foreground shadow-sm backdrop-blur"
                                 >
-                                    <div className="h-6 w-6 flex flex-row gap-2 items-center justify-center text-center self-center">{item.icon}</div>
+                                    <div className="h-6 w-6 flex flex-row gap-2 items-center justify-center text-center self-center">
+                                        {item.icon}
+                                    </div>
                                 </Link>
                             </motion.div>
                         ))}
@@ -90,9 +87,9 @@ const FloatingDockMobile = ({
             </AnimatePresence>
             <button
                 onClick={() => setOpen(!open)}
-                className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 bg-card/90 text-foreground shadow-sm backdrop-blur"
             >
-                <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                <IconLayoutNavbarCollapse className="h-5 w-5 text-muted-foreground" />
             </button>
         </div>
     );
@@ -111,8 +108,8 @@ const FloatingDockDesktop = ({
             onMouseMove={(e) => mouseX.set(e.pageX)}
             onMouseLeave={() => mouseX.set(Infinity)}
             className={cn(
-                "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
-                className
+                'mx-auto hidden h-16 items-end gap-4 rounded-2xl border border-border/60 bg-card/85 px-4 pb-3 shadow-[0_14px_40px_-28px_rgba(15,23,42,0.5)] backdrop-blur md:flex',
+                className,
             )}
         >
             {items.map((item) => (
@@ -144,11 +141,15 @@ function IconContainer({
     let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
     let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
-    let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+    let widthTransformIcon = useTransform(
+        distance,
+        [-150, 0, 150],
+        [20, 40, 20],
+    );
     let heightTransformIcon = useTransform(
         distance,
         [-150, 0, 150],
-        [20, 40, 20]
+        [20, 40, 20],
     );
 
     let width = useSpring(widthTransform, {
@@ -182,15 +183,15 @@ function IconContainer({
                 style={{ width, height }}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+                className="relative flex aspect-square items-center justify-center rounded-full border border-border/60 bg-secondary/90 text-foreground"
             >
                 <AnimatePresence>
                     {hovered && (
                         <motion.div
-                            initial={{ opacity: 0, y: 10, x: "-50%" }}
-                            animate={{ opacity: 1, y: 0, x: "-50%" }}
-                            exit={{ opacity: 0, y: 2, x: "-50%" }}
-                            className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
+                            initial={{ opacity: 0, y: 10, x: '-50%' }}
+                            animate={{ opacity: 1, y: 0, x: '-50%' }}
+                            exit={{ opacity: 0, y: 2, x: '-50%' }}
+                            className="absolute left-1/2 -top-8 w-fit -translate-x-1/2 whitespace-pre rounded-md border border-border/60 bg-popover px-2 py-0.5 text-xs text-popover-foreground shadow-md"
                         >
                             {title}
                         </motion.div>

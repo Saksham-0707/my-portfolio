@@ -1,19 +1,20 @@
 [
-    {
-        "title": "Typespeed-Tester",
-        "description": "Typespeed-Tester is a platform where users can check how fast you can type using a keyboard",
-        "type": "Personal Projects",
-        "imageUrl": "/assets/img/true.png",
-        "githubUrl": "https://github.com/Saksham-0707/typing-test",
-        "demoUrl": "https://typing-test-theta-red.vercel.app/",
-        "skills": [
-            "REACT.JS",
-            "TYPESCRIPT",
-            "TAILWIND",
-            "REACT-HOOK-FORMS",
-            "VERCEL"
-        ]
-    },
+{
+  "title": "Guess Who Game",
+  "description": "A fun interactive web game where players guess a hidden character by asking questions and eliminating options. Features real-time gameplay, character suggestions, and a responsive UI.",
+  "type": "Personal Projects",
+  "imageUrl": "/assets/img/guesswho.png",
+  "githubUrl": "https://github.com/Saksham-0707/guess-who-game",
+  "demoUrl": "https://guess-who-game-tau.vercel.app/",
+  "skills": [
+    "REACT.JS",
+    "TYPESCRIPT",
+    "TAILWIND",
+    "WEBSOCKETS",
+    "FRAMER MOTION",
+    "VERCEL"
+  ]
+},
     {
         "title": "QUIZ APP",
         "description": "Developed a Full-Stack Quiz App using React and TypeScript, featuring multiple quiz categories, real-time scoring, and a clean, responsive UI. Integrated dynamic question loading and a timer functionality.",
