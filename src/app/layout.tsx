@@ -1,38 +1,37 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
-import { NavigationBar } from '@/components/nav-bar'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GeistSans } from "geist/font/sans";
-
+import type { Metadata } from 'next';
+import './globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
+import { NavigationBar } from '@/components/nav-bar';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GeistSans } from 'geist/font/sans';
 
 export const metadata: Metadata = {
     title: 'Saksham Doda',
     description: 'I plan, design, build, test and deploy software',
-}
+};
 
 export default function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode
+    children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={GeistSans.className}>
+        <html lang="en" suppressHydrationWarning>
+            <body
+                className={`${GeistSans.className} min-h-screen bg-background text-foreground antialiased`}
+            >
                 <ThemeProvider
-                    attribute='class'
-                    defaultTheme='dark'
+                    attribute="class"
+                    defaultTheme="system"
                     enableSystem
-                    disableTransitionOnChange
+                    storageKey="portfolio-theme"
                 >
                     <NavigationBar />
-                    <main className='container mx-auto'>
-                        {children}
-                    </main>
-                    <footer className="container mx-auto py-4">
-                        <p className="text-center text-sm text-muted-foreground hover:text-white transition-all">
-                            © Designed & Built by Saksham Doda· 2025
+                    <main className="container mx-auto">{children}</main>
+                    <footer className="container mx-auto py-8">
+                        <p className="text-center text-sm text-muted-foreground transition-colors duration-300 hover:text-foreground">
+                            © Designed & Built by Saksham Doda · 2025
                         </p>
                     </footer>
                 </ThemeProvider>
@@ -40,5 +39,5 @@ export default function RootLayout({
                 <SpeedInsights />
             </body>
         </html>
-    )
+    );
 }

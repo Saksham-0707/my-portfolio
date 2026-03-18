@@ -1,10 +1,10 @@
-import { ExternalLink } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import { AspectRatio } from "./ui/aspect-ratio";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { CardBody, CardContainer, CardItem } from './ui/3d-card';
+import { AspectRatio } from './ui/aspect-ratio';
+import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 
 interface ProjectCardProps {
     title: string;
@@ -16,10 +16,18 @@ interface ProjectCardProps {
     skills?: string[];
 }
 
-export function ProjectCard3d({ title, type, description, imageUrl, githubUrl, demoUrl, skills }: ProjectCardProps) {
+export function ProjectCard3d({
+    title,
+    type,
+    description,
+    imageUrl,
+    githubUrl,
+    demoUrl,
+    skills,
+}: ProjectCardProps) {
     return (
-        <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[30rem] h-auto w-auto rounded-xl p-6 border">
+        <CardContainer className="inter-var" containerClassName="py-8">
+            <CardBody className="group/card relative h-auto w-auto rounded-[1.75rem] border border-border/70 bg-card/85 p-6 shadow-[0_20px_60px_-35px_rgba(15,23,42,0.55)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_24px_80px_-34px_rgba(16,185,129,0.35)] sm:w-[30rem]">
                 <CardItem translateZ="50" className="w-full mt-4">
                     <AspectRatio ratio={16 / 9} className="bg-muted">
                         <Image
@@ -57,17 +65,20 @@ export function ProjectCard3d({ title, type, description, imageUrl, githubUrl, d
                         className="flex gap-2 flex-wrap mt-6"
                     >
                         {skills.map((skill) => (
-                            <Badge key={skill} variant="default">{skill}</Badge>
+                            <Badge key={skill} variant="default">
+                                {skill}
+                            </Badge>
                         ))}
                     </CardItem>
                 )}
-                <div className="flex justify-between items-center mt-10">
+                <div className="mt-10 flex items-center justify-between gap-4">
                     {githubUrl && (
-                        <CardItem
-                            translateZ={30}
-                        >
+                        <CardItem translateZ={30}>
                             <Link href={githubUrl} target="_blank" passHref>
-                                <Button variant="link">
+                                <Button
+                                    variant="link"
+                                    className="px-0 text-foreground/80 hover:text-primary"
+                                >
                                     Link To Github
                                     <ExternalLink className="ml-2" />
                                 </Button>
@@ -75,11 +86,9 @@ export function ProjectCard3d({ title, type, description, imageUrl, githubUrl, d
                         </CardItem>
                     )}
                     {demoUrl && (
-                        <CardItem
-                            translateZ={30}
-                        >
+                        <CardItem translateZ={30}>
                             <Link href={demoUrl} target="_blank" passHref>
-                                <Button>
+                                <Button className="rounded-full px-5 shadow-sm">
                                     Live URL
                                     <ExternalLink className="ml-2" />
                                 </Button>
@@ -89,5 +98,5 @@ export function ProjectCard3d({ title, type, description, imageUrl, githubUrl, d
                 </div>
             </CardBody>
         </CardContainer>
-    )
+    );
 }
